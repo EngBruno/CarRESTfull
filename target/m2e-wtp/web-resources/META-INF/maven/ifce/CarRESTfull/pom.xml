@@ -72,11 +72,12 @@
 			<version>2.2.4</version>
 		</dependency>
 		<!-- Jettison -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.glassfish.jersey.media</groupId>
 			<artifactId>jersey-media-json-jettison</artifactId>
 			<version>2.3.1</version>
-		</dependency>
+		</dependency> -->
+		<!-- Jersey -->
 		<dependency>
    			<groupId>org.glassfish.jersey.containers</groupId>
    			<artifactId>jersey-container-servlet-core</artifactId>
