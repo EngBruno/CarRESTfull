@@ -6,14 +6,7 @@ import java.util.Map;
 import javax.ws.rs.core.Application;
 
 public class MyApplication extends Application {
-	
-//	@Override
-//	public Set<Object>getSingletons(){
-//		Set<Object> singletons = new HashSet<>();
-//		singletons.add(new JettisonFeature());
-//		return singletons;
-//	}
-	
+	 
 	@Override
 	public Map<String,Object> getProperties(){
 		Map<String,Object> properties = new HashMap<>();

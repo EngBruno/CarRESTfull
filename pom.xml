@@ -7,6 +7,9 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>CarRESTfull</name>
+  <properties>
+  	<spring.version>4.1.6.RELEASE</spring.version>
+  </properties>
   <description>Project to study RESTful Web Service</description> <build>
 		<plugins>
 			<plugin>
@@ -59,29 +62,60 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.30</version>
 		</dependency>
-		<!-- Jettison -->
-		<dependency>
-			<groupId>org.codehaus.jettison</groupId>
-			<artifactId>jettison</artifactId>
-			<version>1.3.6</version>
-		</dependency>
 		<!-- Google Gson -->
 		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.2.4</version>
 		</dependency>
-		<!-- Jettison -->
-		<!-- <dependency>
-			<groupId>org.glassfish.jersey.media</groupId>
-			<artifactId>jersey-media-json-jettison</artifactId>
-			<version>2.3.1</version>
-		</dependency> -->
 		<!-- Jersey -->
 		<dependency>
    			<groupId>org.glassfish.jersey.containers</groupId>
-   			<artifactId>jersey-container-servlet-core</artifactId>
-   			<version>2.3.1</version>
+   			<artifactId>jersey-container-servlet</artifactId>
+   			<version>2.18</version>
 		</dependency> 
+		<!-- Jersey-Spring -->
+		<dependency>
+   			 <groupId>org.glassfish.jersey.ext</groupId>
+    			<artifactId>jersey-spring3</artifactId>
+    			<version>2.18</version>
+    			<exclusions>
+    				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>			
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-web</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-aop</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-beans</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-tx</artifactId>
+				</exclusion>
+    			</exclusions>
+		</dependency>
+		<!-- Spring -->
+		<dependency>
+   			 <groupId>org.springframework</groupId>
+    			<artifactId>spring-web</artifactId>
+    			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+   			 <groupId>org.springframework</groupId>
+    			<artifactId>spring-orm</artifactId>
+    			<version>${spring.version}</version>
+		</dependency>
 	</dependencies>
 </project>

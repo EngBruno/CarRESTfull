@@ -12,15 +12,21 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import br.com.ifce.domain.Car;
 import br.com.ifce.domain.CarService;
 import br.com.ifce.domain.Response;
 
+
 @Path("/cars")
 @Produces(MediaType.APPLICATION_JSON+";charset=utf-8")
 @Consumes(MediaType.APPLICATION_JSON+";charset=utf-8")
+@Component
 public class CarsResource {
-	CarService carService = new CarService();
+	@Autowired
+	private CarService carService;
 	
 	@GET
 	public List<Car> get(){

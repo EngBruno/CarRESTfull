@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+@Component
 public class CarDAO extends BaseDAO{
 	
 	public Car getCarroById(long id) throws SQLException{
